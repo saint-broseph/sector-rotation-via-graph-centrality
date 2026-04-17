@@ -20,7 +20,7 @@ def fetch_sector_returns(start_date="2015-01-01", end_date="2023-12-31"):
         prices = data['Close']
     
     # Calculate daily percentage change (returns) and drop the first row (NaN)
-    returns = prices.pct_change().dropna()
+    returns = np.log(prices / prices.shift(1)).dropna()
     
     print("Data successfully downloaded and returns calculated!")
     return returns
