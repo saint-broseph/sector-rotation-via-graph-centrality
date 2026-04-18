@@ -19,12 +19,12 @@ The core hypothesis: **topology precedes price**. Before a sector breaks out, it
  
 | Strategy | Ann. Return | Sharpe Ratio | Max Drawdown |
 |---|---|---|---|
-| Dense Graph Centrality (Iter. 1) | 6.50% | 0.35 | -35.0% |
-| MST Centrality (Iter. 2) | 9.20% | 0.55 | -32.0% |
-| MST + Regime Switch (Iter. 3) | 7.80% | **0.65** | **-15.0%** |
-| Centrality Velocity ΔC (Iter. 4) | -2.50% | -0.15 | -45.0% |
-| Price Momentum Baseline | 13.50% | 0.85 | -25.0% |
-| SPY Benchmark | 11.50% | 0.70 | -24.0% |
+| Dense Graph Centrality (Iter. 1) | 7.00% | 0.32 | -25.39% |
+| MST Centrality (Iter. 2) | 10.35% | 0.45 | -30.59% |
+| MST + Regime Switch (Iter. 3) | 10.31% | 0.45 | -30.59% |
+| Centrality Velocity ΔC (Iter. 4) | 6.44% | 0.37 | -29.38% |
+| Price Momentum Baseline | 11.81% | 0.57 | -21.08% |
+| SPY Benchmark | 9.16% | 0.47 | -25.56% |
  
 **Bottom line:** MST-filtered topology is an effective *risk oracle* - it reliably detects systemic stress and flight-to-safety rotations - but underperforms pure price momentum as a standalone alpha signal in mega-cap-dominated, liquidity-driven regimes (2019–2023).
  
