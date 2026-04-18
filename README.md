@@ -60,12 +60,12 @@ sector-rotation-graph-centrality/
  
 The strategy is developed iteratively across four phases:
  
-### Iteration 1 — Dense Graph Eigenvector Centrality
+### Iteration 1 - Dense Graph Eigenvector Centrality
 Build a fully connected weighted graph from the 60-day rolling Pearson correlation matrix. Compute Eigenvector Centrality and go long the top-2 sectors monthly.
  
 **Result:** Fails during volatility spikes - all correlations converge to 1.0, turning the network into an indistinguishable "hairball."
  
-### Iteration 2 — Maximum Spanning Tree (MST) Filter
+### Iteration 2 - Maximum Spanning Tree (MST) Filter
 Apply Kruskal's algorithm to extract the topological backbone of the market (N−1 edges from N nodes). Compute EC strictly on the sparse MST.
  
 ```
@@ -75,7 +75,7 @@ T_t = argmax  Σ  A_i,j(t)      over all spanning trees T
  
 **Result:** Much cleaner signal. Clearly captures XLE's structural rise before the 2022 inflation shock. Still suffers drawdowns when the whole network falls together.
  
-### Iteration 3 — Topological Regime Switch
+### Iteration 3 - Topological Regime Switch
 Introduce a binary switch: if defensive sectors (XLU or XLP) rank in the top-2 by EC, interpret this as an institutional "flight to safety" and liquidate to 100% cash.
  
 ```
@@ -85,7 +85,7 @@ S_t = 1   otherwise
  
 **Result:** Successfully dodges localized crashes (visible as flat plateaus in the equity curve). However, causes severe "cash drag" during the 2020–2021 liquidity-driven bull run.
  
-### Iteration 4 — Centrality Velocity (ΔC)
+### Iteration 4 - Centrality Velocity (ΔC)
 Shift from the *level* of centrality to its *first derivative* - buy sectors gaining centrality fastest to front-run institutional rotation.
  
 ```
