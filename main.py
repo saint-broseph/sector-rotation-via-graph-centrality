@@ -18,7 +18,7 @@ def optimize_parameters():
         centrality_df = calculate_rolling_centrality(raw_returns, window=w)
         # Note: This will overwrite the equity_curve.png for each run, 
         # but we just want to read the terminal metrics for now.
-        run_backtest(raw_returns, centrality_df, top_n=3)
+        run_backtest(raw_returns, centrality_df, top_n=2)
 
 if __name__ == "__main__":
     optimize_parameters()
