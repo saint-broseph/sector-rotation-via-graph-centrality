@@ -1,5 +1,6 @@
 import yfinance as yf
 import pandas as pd
+import numpy as np
 
 def fetch_sector_returns(start_date="2015-01-01", end_date="2023-12-31"):
     """
